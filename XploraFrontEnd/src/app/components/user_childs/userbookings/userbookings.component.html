@@ -1,0 +1,31 @@
+<div
+  class="bookings-container"
+  *ngIf="userbookingsArr.length > 0; else noBookingsTemplate"
+>
+  <div *ngFor="let booking of userbookingsArr" class="booking-card">
+    <img
+      [src]="booking.tour_image"
+      alt="{{ booking.tour_title }}"
+      class="booking-image"
+    />
+
+    <h2>{{ booking.tour_title }}</h2>
+    <p><strong>Booking Date:</strong> {{ booking.booking_date | date }}</p>
+    <p><strong>User Name:</strong> {{ booking.user_name }}</p>
+    <p><strong>Email:</strong> {{ booking.user_email }}</p>
+    <p><strong>Tour Description:</strong> {{ booking.tour_description }}</p>
+    <p>
+      <strong>Is Review Open:</strong>
+      {{ booking.isreviewsopen ? "Yes" : "No" }}
+    </p>
+    <p>
+      <strong>Is Cancelled:</strong> {{ booking.iscancelled ? "Yes" : "No" }}
+    </p>
+    <button (click)="cancelBooking(booking.booking_id)">Cancel Booking</button>
+  </div>
+</div>
+
+<ng-template #noBookingsTemplate>
+  <h1 style="margin: 2%">You have no bookings yet!</h1>
+  <hr />
+</ng-template>

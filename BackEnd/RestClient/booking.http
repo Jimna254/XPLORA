@@ -1,0 +1,49 @@
+## Create Booking
+POST http://localhost:3001/bookings
+Content-Type: application/json 
+
+{
+    "tour_id": "9e54c132-6b98-4b56-b146-7504a1a4dc5b",
+    "user_id": "0076eae1-57a2-4704-a660-43ca584195d3"
+   
+}
+
+### Get all Bookings
+GET http://localhost:3001/bookings
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4ODg5ODIwLCJleHAiOjE3MDkyMzU0MjB9.H6vbqDBbdeL0R0zaLdK72ynqor5PIcE4qeHobCcj1Os
+ 
+
+### Get One Booking
+GET http://localhost:3001/bookings/25b4624a-89a0-4186-8ed5-08ab66c526f8
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzQyOTdlLTIzN2MtNDcxZS1iMjlhLWMzZTk1NmZkMDRlOSIsImVtYWlsIjoiamFtZXNrdzIxOEBnbWFpbC5jb20iLCJpYXQiOjE3MDg0MTYxODAsImV4cCI6MTcwODUwMjU4MH0.cdPdt3icLYMsv-iMNWs1L2SbtR0n-G98dIIaYx-kzsQ
+
+
+### Get by User_id
+GET http://localhost:3001/bookings/userbookings/2f2a7bc9-498a-4551-aa95-a31b040114dd
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmYyYTdiYzktNDk4YS00NTUxLWFhOTUtYTMxYjA0MDExNGRkIiwiZW1haWwiOiJyYWRoaWsyNzg5QGdtYWlsLmNvbSIsIm5hbWUiOiIgUmFkaGlrMTIiLCJyb2xlIjoidXNlciIsImlzV2VsY29tZWQiOmZhbHNlLCJpc2RlbGV0ZWQiOmZhbHNlLCJpYXQiOjE3MDg5MzYxMTAsImV4cCI6MTcwOTI4MTcxMH0.PrZo3MtN0p_OU3r5C4_O3ORYfEhnN9DOxNXGmw3qMIo
+### Update a Booking
+PUT http://localhost:3001/bookings/update/059ebbf1-c2ef-44d1-892a-9b47d163d118
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0
+
+
+{
+    "tour_id": "9e54c132-6b98-4b56-b146-7504a1a4dc5b",
+    "user_id": "0076eae1-57a2-4704-a660-43ca584195d3"
+   
+}
+
+### Cancel Booking
+PUT http://localhost:3001/bookings/cancel/ab7b9101-5286-4c09-9aa0-e99be7984ed7
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmYyYTdiYzktNDk4YS00NTUxLWFhOTUtYTMxYjA0MDExNGRkIiwiZW1haWwiOiJyYWRoaWsyNzg5QGdtYWlsLmNvbSIsIm5hbWUiOiIgUmFkaGlrMTIiLCJyb2xlIjoidXNlciIsImlzV2VsY29tZWQiOmZhbHNlLCJpc2RlbGV0ZWQiOmZhbHNlLCJpYXQiOjE3MDg5MzYxMTAsImV4cCI6MTcwOTI4MTcxMH0.PrZo3MtN0p_OU3r5C4_O3ORYfEhnN9DOxNXGmw3qMIo
+
+
+### Delete a Booking
+
+DELETE http://localhost:3001/bookings/delete/059ebbf1-c2ef-44d1-892a-9b47d163d118
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0

@@ -1,0 +1,149 @@
+.main {
+  margin-left: 2%;
+}
+.tourscontainer {
+  display: flex;
+  gap: 5px;
+  margin-left: 2%;
+}
+
+.topper {
+  margin: 1% 2% 1% 2%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5%;
+  background-color: rgb(196, 236, 223);
+}
+
+.addition {
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  width: 20%;
+}
+
+.tour-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-info h3 {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.actions > button {
+  padding: 5px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+
+    rgb(135, 62, 35),
+    rgb(33, 226, 15)
+  );
+  margin-top: 2%;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+
+  align-self: baseline;
+}
+
+.actions i.fa-solid {
+  font-size: 16px;
+}
+
+.search-container {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#search-box {
+  width: 100%; /* Makes the search box take up the full width of its container */
+  padding: 10px 15px; /* Adds some padding inside the search box */
+  font-size: 16px; /* Increases the font size for better readability */
+  border: 2px solid #cccccc; /* Sets a border with a light gray color */
+  border-radius: 25px; /* Rounds the corners of the search box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  outline: none; /* Removes the default focus outline */
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+
+#search-box:focus {
+  border-color: #007bff; /* Changes the border color when focused */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Darkens the shadow for emphasis */
+}
+
+#search-box::placeholder {
+  color: #cccccc; /* Sets the color of the placeholder text */
+}
+
+#search-box:focus::placeholder {
+  color: #aaaaaa; /* Changes the color of the placeholder text when focused */
+}
+
+.pagination-controls {
+  margin-left: 1.5%;
+  max-width: 20%;
+  display: flex;
+  gap: 1%;
+}
+.pagination-controls > button {
+  width: 50%;
+  padding: 2%;
+  border: none;
+  background-color: blue;
+  color: aliceblue;
+}
+.pageno {
+  margin-left: 1.5%;
+  font-weight: bold;
+  float: right;
+}
+.errormsg,
+.successmsg {
+  text-align: center;
+  font-size: 0.875rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+}
+
+.errormsg {
+  color: #ef4444;
+  font-weight: bolder;
+  background-color: #fee2e2;
+}
+
+.successmsg {
+  color: #22c55e;
+  font-weight: bold;
+  background-color: #d1fae5;
+}

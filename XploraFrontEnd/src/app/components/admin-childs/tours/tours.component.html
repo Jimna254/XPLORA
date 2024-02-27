@@ -1,0 +1,49 @@
+<div class="main">
+  <div class="topper">
+    <button class="addition" routerLink="/admin/createtour">
+      <i class="fa-solid fa-plus"></i>AddTour
+    </button>
+  </div>
+  <div class="tourscontainer">
+    <div *ngFor="let tour of paginatedTours" class="tour-card">
+      <img [src]="tour.image" alt="{{ tour.title }}" class="tour-image" />
+      <div class="tour-info">
+        <h3>{{ tour.title }}</h3>
+        <p>{{ tour.description }}</p>
+        <p><strong>Location:</strong> {{ tour.location }}</p>
+        <p><strong>Start Date:</strong> {{ tour.start_date | date }}</p>
+        <p *ngIf="tour.end_date">
+          <strong>End Date:</strong> {{ tour.end_date | date }}
+        </p>
+        <div class="actions">
+          <button
+            class="btnEdit"
+            routerLink="/admin/updatetour/{{ tour.tour_id }}"
+          >
+            Edit<i
+              class="fa-solid fa-pen-to-square"
+              style="color: rgb(255, 187, 0)"
+            ></i>
+          </button>
+          <button class="btnDelete" (click)="deleteTour(tour.tour_id)">
+            Dalete
+            <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0)"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-controls">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      << Prev
+    </button>
+
+    <button
+      (click)="goToPage(currentPage + 1)"
+      [disabled]="currentPage === maxPage()"
+    >
+      Next >>
+    </button>
+  </div>
+  <div class="pageno">Page {{ currentPage }} / {{ maxPage() }}</div>
+</div>

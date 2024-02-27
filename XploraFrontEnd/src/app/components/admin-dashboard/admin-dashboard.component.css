@@ -1,0 +1,8 @@
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+.childs {
+  width: 100%;
+}

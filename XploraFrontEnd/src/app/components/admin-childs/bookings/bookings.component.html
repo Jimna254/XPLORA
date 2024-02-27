@@ -1,0 +1,29 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Booking No:</th>
+        <th>Tour Title</th>
+        <th>Booking Date</th>
+        <th>User</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookingsArr; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ booking.tour_name }}</td>
+        <td>{{ booking.booking_date | date }}</td>
+        <td>{{ booking.user_name }}</td>
+        <td>{{ booking.iscancelled }}</td>
+
+        <td class="actions">
+          <button class="btnDelete" (click)="deleteBooking(booking.booking_id)">
+            <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0)"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

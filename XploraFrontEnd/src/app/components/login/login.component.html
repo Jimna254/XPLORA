@@ -1,0 +1,39 @@
+<div class="mainContainer">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+    <h1>{{ title }}</h1>
+    <div class="errormsg" *ngIf="visible">
+      {{ errorMsg }}
+    </div>
+    <div class="successmsg" *ngIf="visible2">
+      {{ sucessMsg }}
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        ngModel
+        placeholder="johndoe@gmail.com"
+      />
+    </div>
+
+    <div>
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        ngModel
+        placeholder="*******"
+      />
+    </div>
+    <div>
+      <button type="submit" class="btn">Login</button>
+      <a routerLink="/register">Already have an account?</a>
+    </div>
+  </form>
+</div>

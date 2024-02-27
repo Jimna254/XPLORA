@@ -1,0 +1,38 @@
+## Create Category
+POST http://localhost:3001/category
+Content-Type: application/json 
+
+{
+    "name": "Weekend Getaways",
+    "description": "Top Tier Staycations"
+   
+}
+
+### Get all Categories
+GET http://localhost:3001/category
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4NTcyNjE3LCJleHAiOjE3MDg5MTgyMTd9.4WlnQw4BIcaJfeImpkBWonb8o8MjxxEswd9kz2QxtdY
+ 
+
+### Get One Category
+GET http://localhost:3001/category/392ba0d3-3b00-4eb7-b744-f91c32d7eb25
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4NTg3MjI2LCJleHAiOjE3MDg5MzI4MjZ9.xm2eUvVlxSvdyfg74z-vzq2r3O-Ut1GF2TB16xkzFS0
+
+
+### Update a Category
+PUT http://localhost:3001/category/update/6388b3f1-4a3e-4cf2-99aa-43f053b67b00
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0
+
+
+{
+      "name": "Cultral Excursions",
+    "description": "Top Tier Excursions"
+}
+
+### Delete a category
+
+DELETE http://localhost:3001/category/delete/d397192c-caae-439b-a974-01ccc200c717
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0

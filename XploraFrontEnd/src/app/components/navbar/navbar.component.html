@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <div class="logo">{{ title }}</div>
+    <button class="hamburger" (click)="toggleNavbar()">
+      <span class="hamburger-icon">
+        <i class="fa fa-bars"></i>
+      </span>
+    </button>
+  </div>
+  <ul class="nav-menu">
+    <li routerLink="/" routerLinkActive="active">Home</li>
+    <li routerLink="/register" routerLinkActive="active">Register</li>
+    <li routerLink="/login" routerLinkActive="active">Login</li>
+    <li (click)="logout()">Logout</li>
+  </ul>
+</nav>

@@ -1,0 +1,65 @@
+.main {
+  margin-left: 2%;
+}
+.tourscontainer {
+  display: flex;
+  gap: 5px;
+  margin-left: 2%;
+}
+
+.topper {
+  margin: 1% 2% 1% 2%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5%;
+  background-color: rgb(196, 236, 223);
+}
+
+.addition {
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  width: 20%;
+}
+
+.tour-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tour-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-info {
+  padding: 15px;
+}
+
+.tour-info h3 {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.actions > button {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions i.fa-solid {
+  font-size: 16px;
+}

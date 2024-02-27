@@ -1,0 +1,30 @@
+/* sidebar.component.css */
+.sidebar {
+  width: 250px;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgb(234, 182, 118);
+  padding: 20px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  color: #21130d;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgb(135, 62, 35);
+  color: white;
+}

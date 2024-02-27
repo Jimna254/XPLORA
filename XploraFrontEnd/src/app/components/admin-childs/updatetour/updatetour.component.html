@@ -1,0 +1,132 @@
+<div class="maincontainer">
+  <div class="successmsg" *ngIf="visible2">
+    {{ sucessMsg }}
+  </div>
+  <div class="container">
+    <form
+      [formGroup]="updateTourForm"
+      (ngSubmit)="updateTour()"
+      class="form-container"
+    >
+      <h1 style="text-align: center">Update Tour</h1>
+      <div class="form-group">
+        <label class="label">Tour Title</label>
+        <input type="text" formControlName="title" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('title')?.invalid &&
+            updateTourForm.get('title')?.touched
+          "
+          class="error-message"
+        >
+          Tour title is required!
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="label">Image</label>
+        <input type="text" formControlName="image" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('image')?.invalid &&
+            updateTourForm.get('image')?.touched
+          "
+          class="error-message"
+        >
+          Tour Image is required!
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="label">Description</label>
+        <input type="text" formControlName="description" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('description')?.invalid &&
+            updateTourForm.get('description')?.touched
+          "
+          class="error-message"
+        >
+          Tour description is required!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">location</label>
+        <input type="text" formControlName="location" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('location')?.invalid &&
+            updateTourForm.get('location')?.touched
+          "
+          class="error-message"
+        >
+          Tour Location is required !
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="label">Start Date</label>
+        <input type="date" formControlName="start_date" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('start_date')?.invalid &&
+            updateTourForm.get('start_date')?.touched
+          "
+          class="error-message"
+        >
+          Tour Start Date is required !
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">End Date</label>
+        <input type="date" formControlName="end_date" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('end_date')?.invalid &&
+            updateTourForm.get('end_date')?.touched
+          "
+          class="error-message"
+        >
+          Tour end_date is required !
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="label">Enter Price</label>
+        <input type="text" formControlName="price" class="input" />
+        <div
+          *ngIf="
+            updateTourForm.get('price')?.invalid &&
+            updateTourForm.get('price')?.touched
+          "
+          class="error-message"
+        >
+          Set the price !
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label for="category">Category</label>
+        <select formControlName="category_id" id="category" class="input">
+          <option value="">Select a category</option>
+          <option
+            *ngFor="let category of categoriesArr"
+            [value]="category.category_id"
+          >
+            {{ category.name }}
+          </option>
+        </select>
+        <div
+          *ngIf="
+            updateTourForm.get('category_id')?.invalid &&
+            updateTourForm.get('category_id')?.touched
+          "
+          class="error-message"
+        >
+          Category is required
+        </div>
+      </div> -->
+
+      <div class="form-group flex items-center justify-between">
+        <input type="submit" class="submit-button" value="UpdateTour" />
+      </div>
+    </form>
+  </div>
+</div>

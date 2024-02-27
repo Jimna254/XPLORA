@@ -1,0 +1,41 @@
+## Create reviews
+POST http://localhost:3001/reviews
+Content-Type: application/json 
+
+{
+    "booking_id": "25b4624a-89a0-4186-8ed5-08ab66c526f8",
+    "rating": "5",
+    "comment": "It was wort the money",
+    "user_id": "0076eae1-57a2-4704-a660-43ca584195d3"
+    
+}
+
+### Get all Categories
+GET http://localhost:3001/reviews
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzQyOTdlLTIzN2MtNDcxZS1iMjlhLWMzZTk1NmZkMDRlOSIsImVtYWlsIjoiamFtZXNrdzIxOEBnbWFpbC5jb20iLCJpYXQiOjE3MDg0Mjk5NjEsImV4cCI6MTcwODc3NTU2MX0.UlECrAdIw-KeSwIZlEsl3MNpsOOP5gkuGJoQ7O8CW00
+ 
+
+### Get One reviews
+GET http://localhost:3001/reviews/d3fae27f-24c5-4f57-b486-c6ddd0244285
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzQyOTdlLTIzN2MtNDcxZS1iMjlhLWMzZTk1NmZkMDRlOSIsImVtYWlsIjoiamFtZXNrdzIxOEBnbWFpbC5jb20iLCJpYXQiOjE3MDg0Mjk5NjEsImV4cCI6MTcwODc3NTU2MX0.UlECrAdIw-KeSwIZlEsl3MNpsOOP5gkuGJoQ7O8CW00
+
+
+### Update a reviews
+PUT http://localhost:3001/reviews/update/d3fae27f-24c5-4f57-b486-c6ddd0244285
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzQyOTdlLTIzN2MtNDcxZS1iMjlhLWMzZTk1NmZkMDRlOSIsImVtYWlsIjoiamFtZXNrdzIxOEBnbWFpbC5jb20iLCJpYXQiOjE3MDg0Mjk5NjEsImV4cCI6MTcwODc3NTU2MX0.UlECrAdIw-KeSwIZlEsl3MNpsOOP5gkuGJoQ7O8CW00
+
+{
+     "booking_id": "25b4624a-89a0-4186-8ed5-08ab66c526f8",
+    "rating": "5",
+    "comment": "It was worth the money no doubt about it",
+    "user_id": "0076eae1-57a2-4704-a660-43ca584195d3"
+}
+
+### Delete a reviews
+
+DELETE http://localhost:3001/reviews/delete/d3fae27f-24c5-4f57-b486-c6ddd0244285
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzQyOTdlLTIzN2MtNDcxZS1iMjlhLWMzZTk1NmZkMDRlOSIsImVtYWlsIjoiamFtZXNrdzIxOEBnbWFpbC5jb20iLCJpYXQiOjE3MDg0Mjk5NjEsImV4cCI6MTcwODc3NTU2MX0.UlECrAdIw-KeSwIZlEsl3MNpsOOP5gkuGJoQ7O8CW00

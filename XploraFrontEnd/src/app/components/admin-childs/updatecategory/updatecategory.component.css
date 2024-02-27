@@ -1,0 +1,70 @@
+.container {
+  padding: 20px;
+  margin: auto;
+  max-width: 40vw; /* Adjusted to use viewport width for responsiveness */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* Updated shadow for consistency */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px; /* Adjusted for consistency */
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px; /* Consistent spacing between label and input */
+  color: #495057; /* Keeping the color for contrast */
+  font-weight: bold; /* Maintaining bold labels */
+}
+
+.form-control,
+.textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0; /* Lighter border color for a softer look */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inset shadow for depth */
+  font-size: 16px; /* Keeping font size for readability */
+}
+
+.form-control:focus,
+.textarea:focus {
+  outline: 2px solid #bfdbfe; /* Highlight color when field is focused */
+  outline-offset: 2px;
+  box-shadow: none; /* Removing glow effect to match the new style */
+}
+
+.text-danger {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #f87171; /* Error message color for consistency */
+}
+
+.btn-primary {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #3b82f6; /* Updated to match submit-button style */
+  color: white;
+  font-weight: bold; /* Ensuring button text is bold */
+  border: 1px solid transparent; /* Consistent with submit-button style */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.btn-primary:hover {
+  background-color: #2563eb; /* Darker shade on hover for contrast */
+  border-color: transparent; /* Keeping border transparent on hover */
+}
+
+/* Adjusted button width for consistency */
+.btn-primary {
+  width: 150px;
+  max-width: 150px;
+}

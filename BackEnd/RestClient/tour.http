@@ -1,0 +1,50 @@
+## Create Tours
+POST http://localhost:3001/tours
+Content-Type: application/json 
+
+{
+     "title" : "Diani Staycation",
+      "image" : "https://cdn.pixabay.com/photo/2014/05/21/14/53/beach-house-349670_1280.jpg",
+      "description": "Coast Staycation.",
+      "location": "Diani",
+      "start_date": "12/24/2022",
+      "end_date": "12/24/2022",
+      "price": "$ 1000",
+      "category_id": "392ba0d3-3b00-4eb7-b744-f91c32d7eb25"
+   
+}
+
+### Get all Tours
+GET http://localhost:3001/tours
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4NTkxMzk4LCJleHAiOjE3MDg5MzY5OTh9.8KWq_mLnLZPQZcjvrfD4au6fsG88Vd4WRhBQgHa_FaQ
+ 
+
+### Get One Tour
+GET http://localhost:3001/tours/495993c7-df3b-46bc-81dc-0f7f2796aada
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0
+
+
+### Update a Tour
+PUT http://localhost:3001/tours/update/495993c7-df3b-46bc-81dc-0f7f2796aada
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0
+
+
+{ 
+      "title" : "The Grand Tour",
+      "image" : "https://cdn.pixabay.com/photo/2022/10/04/22/35/rocks-7499199_1280.jpg",
+      "description": "Tour Around Europe.",
+      "location": "Paris, France",
+      "start_date": "12/24/2022",
+      "end_date": "12/24/2022",
+      "price": "$ 1000",
+      "category_id": "392ba0d3-3b00-4eb7-b744-f91c32d7eb25"
+}
+
+### Delete a Tour
+
+DELETE http://localhost:3001/tours/delete/9e54c132-6b98-4b56-b146-7504a1a4dc5b
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4MzMyNTE3LCJleHAiOjE3MDg0MTg5MTd9.BZ140uSNzgf9OVvCdOLGko8TGDss0QlcEe9nh5hnci0

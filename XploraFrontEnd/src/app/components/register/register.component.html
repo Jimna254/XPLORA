@@ -1,0 +1,89 @@
+<div class="register">
+  <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+    <h2>Register</h2>
+    <div class="successmsg" *ngIf="visible1">
+      {{ sucessMsg }}
+    </div>
+    <div class="errormsg" *ngIf="visible2">
+      {{ errorMsg }}
+    </div>
+    <div>
+      <label for="username">Username: </label>
+      <input type="text" id="username" formControlName="name" />
+      <div
+        *ngIf="
+          registerForm.get('name')?.invalid && registerForm.get('name')?.touched
+        "
+        class="error"
+      >
+        Name is required
+      </div>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="username" formControlName="email" />
+      <div
+        *ngIf="
+          registerForm.get('email')?.invalid &&
+          registerForm.get('email')?.touched &&
+          !registerForm.get('email')?.dirty
+        "
+        class="error"
+      >
+        Email is required
+      </div>
+      <div
+        *ngIf="
+          registerForm.get('email')?.invalid &&
+          registerForm.get('email')?.touched &&
+          registerForm.get('email')?.dirty
+        "
+        class="error"
+      >
+        Invalid format
+      </div>
+
+      <div>
+        <label class="mb-2">Phone number</label>
+        <input type="text" formControlName="phone_number" />
+        <div
+          *ngIf="
+            registerForm.get('phone_number')?.invalid &&
+            registerForm.get('phone_number')?.touched
+          "
+          class="error"
+        >
+          Phone number is required
+        </div>
+      </div>
+      <div>
+        <label class="mb-2">Password</label>
+        <input type="password" formControlName="password" />
+        <div
+          *ngIf="
+            registerForm.get('password')?.invalid &&
+            registerForm.get('password')?.touched &&
+            !registerForm.get('password')?.dirty
+          "
+          class="error"
+        >
+          Please input password
+        </div>
+        <div
+          *ngIf="
+            registerForm.get('password')?.invalid &&
+            registerForm.get('password')?.touched &&
+            registerForm.get('password')?.dirty
+          "
+          class="error"
+        >
+          Must have atleast 8 characters
+        </div>
+      </div>
+    </div>
+    <div>
+      <input type="submit" value="Create Account" />
+      <a routerLink="/login">Proceed to login?</a>
+    </div>
+  </form>
+</div>

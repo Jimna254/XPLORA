@@ -1,0 +1,58 @@
+.topper {
+  margin: 1% 2% 1% 2%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5%;
+  background-color: rgb(196, 236, 223);
+}
+
+.addition {
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  width: 20%;
+}
+
+.table {
+  margin-left: 2%;
+  width: 60%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #21130d;
+  color: white;
+}
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.actions > button {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table td.actions i.fa-solid {
+  font-size: 16px;
+}

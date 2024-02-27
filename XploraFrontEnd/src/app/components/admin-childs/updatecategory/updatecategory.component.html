@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Update Category</h2>
+  <form [formGroup]="updateCategoryForm" (ngSubmit)="updateCategory()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+      <div
+        *ngIf="
+          updateCategoryForm.get('name')?.invalid &&
+          updateCategoryForm.get('name')?.touched
+        "
+        class="text-danger"
+      >
+        Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        class="form-control"
+        id="description"
+        formControlName="description"
+      ></textarea>
+      <div
+        *ngIf="
+          updateCategoryForm.get('description')?.invalid &&
+          updateCategoryForm.get('description')?.touched
+        "
+        class="text-danger"
+      >
+        Description is required
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!updateCategoryForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+<div class="container mt-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>User No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Created At</th>
+        <th>Phone Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersArr; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.created_at | date }}</td>
+        <td>{{ user.phone_number }}</td>
+        <td class="actions">
+          <button
+            class="btnEdit"
+            routerLink="/admin/update-user/{{ user.user_id }}"
+          >
+            <i
+              class="fa-solid fa-pen-to-square"
+              style="color: rgb(255, 187, 0)"
+            ></i>
+          </button>
+          <button class="btnDelete" (click)="deleteUser(user.user_id)">
+            <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0)"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

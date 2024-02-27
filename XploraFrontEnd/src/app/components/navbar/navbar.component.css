@@ -1,0 +1,41 @@
+nav {
+  background: #eeeee4;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  align-items: center;
+  height: 8vh;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+
+  color: #873e23;
+}
+
+ul {
+  display: flex;
+  gap: 0px 20px;
+}
+li {
+  list-style-type: none;
+  color: #873e23;
+}
+
+li:hover {
+  color: #21130d;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    /* Add styles for mobile menu */
+  }
+}

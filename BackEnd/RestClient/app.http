@@ -1,0 +1,41 @@
+## Create  User
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": " Radhik12",
+    "email": "radhik2789@gmail.com",
+    "phone_number": "1234567890",
+    "password": "123456789"
+   
+}
+
+### Get all Users
+GET http://localhost:3001/users
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4NTE5NzE0LCJleHAiOjE3MDg4NjUzMTR9.WoHg4_3Tb55fQiMAZYvvkaIizMAohp3bRynBhlKQp40
+
+
+### Get One
+GET http://localhost:3001/users/0076eae1-57a2-4704-a660-43ca584195d3
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhNzg5YzYzLTA1OTQtNDA5ZC1hZGFjLWRiMjA1MmE3YTg1YyIsImVtYWlsIjoiamFtZXNrdzI2MDVAZ21haWwuY29tIiwiaWF0IjoxNzA4Mjg4NDM1LCJleHAiOjE3MDgzNzQ4MzV9.za0_5tDlV08xbp9QzPLYwDVtODDWeOhaiMYOcyv-sM0
+### Update a user
+PUT http://localhost:3001/users/update/0fe2038e-7d6c-4121-8a13-2334915001b7
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4NTQzNjMwLCJleHAiOjE3MDg4ODkyMzB9.tqtIpHtYwrMAuk5clAlQVq400e-eOyz-LN22wD5OQZg
+
+
+{
+    "name": "Kariuki",
+    "email": "james.kariuki@student.kyu.ac.ke",
+    "phone_number": "09876543221",
+    "password": "12345678"
+    
+}
+
+### Delete a user
+
+DELETE http://localhost:3001/users/delete/0076eae1-57a2-4704-a660-43ca584195d3
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTdjNDI5N2UtMjM3Yy00NzFlLWIyOWEtYzNlOTU2ZmQwNGU5IiwiZW1haWwiOiJqYW1lc2t3MjE4QGdtYWlsLmNvbSIsIm5hbWUiOiJKYW1lcyBLYXJpdWtpIiwicm9sZSI6ImFkbWluIiwiaXNXZWxjb21lZCI6bnVsbCwiaXNkZWxldGVkIjpmYWxzZSwiaWF0IjoxNzA4NTQzNjMwLCJleHAiOjE3MDg4ODkyMzB9.tqtIpHtYwrMAuk5clAlQVq400e-eOyz-LN22wD5OQZg

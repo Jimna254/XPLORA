@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE getTours
+AS
+BEGIN
+SELECT * FROM Tours WHERE isdeleted = 0
+END;
