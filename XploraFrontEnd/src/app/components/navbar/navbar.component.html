@@ -10,7 +10,9 @@
   <ul class="nav-menu">
     <li routerLink="/" routerLinkActive="active">Home</li>
     <li routerLink="/register" routerLinkActive="active">Register</li>
-    <li routerLink="/login" routerLinkActive="active">Login</li>
+    <li routerLink="/login" routerLinkActive="active" data-cy="loginLink">
+      Login
+    </li>
     <li (click)="logout()">Logout</li>
   </ul>
 </nav>
